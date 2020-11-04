@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.world {
+  height: 100vh;
+  position: relative;
+  /* fallback for old browsers */
+  background: #0f0c29;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  overflow: hidden;
+}
+
+.forest {
+  position: absolute;
+  background: url('./assets/forest.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.1) translateX(-1%);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  z-index: 9;
+}
+
+.moon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: url('./assets/moon.svg');
+  border-radius: 50%;
+  top: 15%;
+  left: 15%;
+}
+
+.world i {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  animation: star linear infinite;
+}
+
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0);
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px) translateX(50px);
+  }
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  animation: cloud linear infinite;
+}
+
+.cloud1 {
+  max-width: 600px;
+  animation-duration: 50s;
+}
+
+.cloud2 {
+  max-width: 500px;
+  animation-duration: 35s;
+}
+
+.cloud3 {
+  max-width: 600px;
+  animation-duration: 80s;
+}
+
+.cloud4 {
+  top: 200px;
+  max-width: 300px;
+  animation-duration: 70s;
+  animation-delay: -20s;
+}
+
+.cloud5 {
+  top: 150px;
+  max-width: 500px;
+  animation-duration: 40s;
+  animation-delay: -5s;
+}
+
+.cloud6 {
+  top: 75px;
+  max-width: 500px;
+  animation-duration: 30s;
+  animation-delay: -10s;
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateX(-100%) scale(1);
+  }
+  100% {
+    transform: translateX(400%) scale(1.5);
+  }
+}
+
+.title {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  font-size: 4rem;
+  font-family: 'Underdog', serif;
+  color: #fff;
+}
